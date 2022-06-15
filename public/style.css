@@ -1,0 +1,31 @@
+.todo-list{
+    background-color: #E6E6FA	;
+    border: 2px solid  gray;
+    border-radius: 24px;
+    width: 80%;
+    max-width: 800;
+    margin: auto;
+    padding: 24px 24px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #A9A9A9;
+    height: 8%;
+    border-radius: 8px;
+    align-items: center;
+    padding-top: 16px;
+    margin: 0px;
+    padding-bottom:0px;
+    font-size: 16px;
+
+}
+.filter{
+    padding: 0px 8px;
+    font-family:  cursive;
+}
+.filter-all{
+    color: red;
+    border-left: 2px solid #000000;
+}
