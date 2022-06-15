@@ -185,19 +185,18 @@ let data= [
 ]
 
 
- let selected="all";
 function App() {
   let [selected , setSelected]=useState("all");
-  
-function filter_list(list) {
-  let filter_complet = list.filter(function (item) {
-    return item.completed;
-  });
+  //   filter list completed
+  function filter_list(list) {
+    let filter_complet = list.filter(function (item) {
+      return item.completed;
+    });
 
-  return filter_complet;
-}
+    return filter_complet;
+  }
  
-  
+  //  declare variable todos /main list (render list items) 
   let list1= selected === "completed" ? filter_list(data):data;
   let todos=list1.map((item)=>{
     return <p>
@@ -208,27 +207,25 @@ function filter_list(list) {
 
   return (
     <div className="todo-list" >
+      {/*   Page Header  */}
         <div className="header">
               <h2>ToDoList</h2>
               <div>
                   <span  className="filter filter-completed"  onClick={()=>{
-                    console.log("completed");
                     setSelected("completed");
                   }}>
-                        Completed
+                    Completed
                   </span>
                  
                   <span  className="filter filter-all" onClick={()=>{
                    setSelected("all");
-                   console.log("all");
                   }}>
-                        ALL
+                    ALL
                   </span>
-
               </div>
 
         </div>
-     
+     {/*   render list with variable todos */}
         <div className="list">
            < div>
            {todos}
